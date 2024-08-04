@@ -17,8 +17,13 @@ const onSearchFormSubmit = event => {
       message: 'Input something to search!',
       position: 'topRight',
     });
+
+    searchForm.reset();
+
     return;
   }
+
+  searchForm.reset();
 
   loaderPlaceholder.classList.remove('is-hidden');
   apiCalls
@@ -33,24 +38,20 @@ const onSearchFormSubmit = event => {
             'Sorry, there are no images matching your search query. Please try again!',
           position: 'topRight',
         });
-        event.target.reset();
+
+        searchForm.reset();
+
         return;
       }
-      clearGallery();
       const galleryHTML = render.renderGallery(hits);
       galleryEL.innerHTML = galleryHTML;
-      // const lightbox = new SimpleLightbox('.gallery a');
       gallery.refresh();
     });
 };
 
-function clearGallery() {
-  galleryEL.innerHTML = '';
-}
-
 searchForm.addEventListener('submit', onSearchFormSubmit);
 
 const gallery = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
+  captionsData: 'tags',
   captionDelay: 250,
 });

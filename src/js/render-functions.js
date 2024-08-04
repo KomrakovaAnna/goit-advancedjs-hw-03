@@ -18,7 +18,7 @@ export const renderGallery = images => {
       class="gallery-image"
   src="${webformatURL}"
   data-source="${largeImageURL}"
-  data-tags="${tags}"
+  tags="${tags}"
   data-likes="${likes}"
   data-views="${views}"
   data-comments="${comments}"
@@ -29,19 +29,19 @@ export const renderGallery = images => {
   <div >
   <ul class="stats">
     <li class="stat-item">
-    <div class="stat-header">Likes</div>
+    <div id="stat-header">Likes</div>
     <div class="stat-value">${likes}</div>
     </li>
     <li class="stat-item">
-    <div class="stat-header">Views</div>
+    <div id="stat-header">Views</div>
     <div class="stat-value">${views}</div>
     </li>
     <li class="stat-item">
-    <div class="stat-header">Comments</div>
+    <div id="stat-header">Comments</div>
     <div class="stat-value">${comments}</div>
     </li>
     <li class="stat-item">
-    <div class="stat-header">Downloads</div>
+    <div id="stat-header">Downloads</div>
     <div class="stat-value">${downloads}</div>
     </li>
   </ul>
