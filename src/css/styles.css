@@ -5,7 +5,10 @@
   |============================
 */
 @import url('./reset.css');
-
+@import url('./gallery.css');
+@import url('./search.css');
+@import url('./loader.css');
+@import url('izitoast/dist/css/iziToast.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -21,6 +24,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+body {
+  background: #F6F6FE;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
 }
 h1 {
   padding-top: 40px;
@@ -64,4 +82,9 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.loader__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
 }
