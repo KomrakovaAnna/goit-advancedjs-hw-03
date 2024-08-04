@@ -61,4 +61,5 @@
   flex-direction: column;
   justify-content: center;
 }
-.stat-item > #stat-header {}
+.stat-item > #stat-header {
+}
