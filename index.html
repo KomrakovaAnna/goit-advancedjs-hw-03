@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-advancedjs-hw-03</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,10 +12,12 @@
     />
     
     <script type="module" crossorigin src="/goit-advancedjs-hw-03/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-advancedjs-hw-03/assets/index-79a86a64.css">
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-03/assets/vendor-403a0c46.js">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-03/assets/vendor-a088063d.css">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-03/assets/index-0412ac7e.css">
   </head>
   <body>
-    <nav class="nav">
+    <nav class="nav visually-hidden">
       <ul class="nav-list">
         <li class="nav-item">
           <a href="./" class="nav-link"></a>
@@ -29,12 +30,32 @@
     </nav>
 
     <section>
-      <h1>goit-advancedjs-hw-03</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/goit-advancedjs-hw-03/assets/javascript-8dac5379.svg" alt="" />
+      <div class="visually-hidden">
+        <h1>goit-advancedjs-hw-03</h1>
+        <!-- Path to images as from index.html file -->
+        <img src="/goit-advancedjs-hw-03/assets/javascript-8dac5379.svg" alt="" />
+      </div>
+
+      <div class="search-form__wrapper">
+        <form class="search__form">
+          <input
+            class="search__input"
+            type="text"
+            name="user_query"
+            placeholder="Search images..."
+          />
+          <button class="search__button" type="submit">Search</button>
+        </form>
+        <div class="loader__wrapper">
+          <span class="js__loader is-hidden"></span>
+        </div>
+
+        <ul class="gallery"></ul>
+      </div>
     </section>
 
-
+    
+    
     
   </body>
 </html>
